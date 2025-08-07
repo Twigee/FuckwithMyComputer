@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sendMessage()
+        {
+            var x = document.getElementById("msg").value   
+            fetch('https://ntfy.sh/FuckTwigsComputer', 
+            {
+            method: 'POST', // PUT works too
+            body: x
+        })
+        setTimeout(function(){
+            window.close()
+        }, 300);
+        }
+        
+    </script>
+
+
+  
+
+</head>
+<body>
+    <input placeholder="Type your message" id="msg" type="text">
+    <input onclick="sendMessage" type="submit">
+</body>
+</html>
