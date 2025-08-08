@@ -14,7 +14,11 @@
             fetch('https://ntfy.sh/FuckTwigsComputer', 
             {
             method: 'POST', // PUT works too
-            body: sendOffMsg
+            body: sendOffMsg,
+            headers:
+                {
+                    "Title":"tts"
+                },
         })
         setTimeout(function(){
             window.close()
@@ -35,3 +39,4 @@
 </body>
 
 </html>
+
