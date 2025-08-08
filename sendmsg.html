@@ -9,7 +9,11 @@
         {
             var msg = document.getElementById("msg").value
             var name = document.getElementById("name").value
-            
+            msg.replaceAll("!","")
+            msg.replaceAll(":","")
+            msg.replaceAll(";","")
+            msg.replaceAll("'","")
+            msg.replaceAll("'","")
             sendOffMsg = name + " says " + msg
             fetch('https://ntfy.sh/FuckTwigsComputer', 
             {
@@ -39,4 +43,5 @@
 </body>
 
 </html>
+
 
