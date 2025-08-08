@@ -10,7 +10,11 @@
             fetch('https://ntfy.sh/FuckTwigsComputer', 
             {
             method: 'POST', // PUT works too
-            body: 'MoveMouse'
+            body: 'MoveMouse',
+            headers:
+                {
+                    "Title":"MoveMouse"
+                },
         })
         setTimeout(function(){
             window.close()
@@ -28,3 +32,4 @@
 </body>
 
 </html>
+
