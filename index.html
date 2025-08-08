@@ -10,7 +10,11 @@
             fetch('https://ntfy.sh/FuckTwigsComputer', 
             {
             method: 'POST', // PUT works too
-            body: 'PauseMedia'
+            body: 'PauseMedia',
+            headers:
+                {
+                    "Title":"PauseMedia"
+                },
         })
         setTimeout(function(){
             window.close()
@@ -28,5 +32,6 @@
 </body>
 
 </html>
+
 
 
