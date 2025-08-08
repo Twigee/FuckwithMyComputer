@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TTS Message</title>
     <script>
         function sendMessage()
         {
-            var x = document.getElementById("msg").value   
+            var msg = document.getElementById("msg").value
+            var name = document.getElementById("name").value
+            
+            sendOffMsg = name + " says " + msg
             fetch('https://ntfy.sh/FuckTwigsComputer', 
             {
             method: 'POST', // PUT works too
-            body: x
+            body: sendOffMsg
         })
         setTimeout(function(){
             window.close()
@@ -25,6 +28,8 @@
 
 </head>
 <body>
+    <h3>Ugly, I will make it pretty at some point</h3>
+    <input placeholder="Type your name" id="name" type="text">
     <input placeholder="Type your message" id="msg" type="text">
     <input onclick="sendMessage()" type="submit">
 </body>
